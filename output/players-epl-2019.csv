@@ -1,0 +1,521 @@
+player,team,pos,number,nat,age,dob,height_in,weight_lb,bmi,mp,app,start
+Bernd Leno,Arsenal,G,1,GER,27,1992-03-04,74.41,171.96,21,1890,21,21
+Pierre-Emerick Aubameyang,Arsenal,F,14,GAB,30,1989-06-18,72.83,163.14,21,1878,21,21
+David Luiz,Arsenal,D,23,BRA,32,1987-04-22,74.41,185.19,23,1620,18,18
+Sokratis Papastathopoulos,Arsenal,D,5,GRE,31,1988-06-09,72.05,180.78,24,1517,17,17
+Mattéo Guendouzi,Arsenal,M,29,FRA,20,1999-04-14,70.87,149.91,20,1413,18,16
+Granit Xhaka,Arsenal,M,34,SUI,26,1992-09-27,72.83,180.78,23,1278,15,15
+Calum Chambers,Arsenal,D,21,ENG,24,1995-01-20,71.65,145.5,19,1103,14,13
+Lucas Torreira,Arsenal,M,11,URU,23,1996-02-11,66.14,141.09,22,1079,18,12
+Ainsley Maitland-Niles,Arsenal,F,15,ENG,21,1997-08-29,69.69,156.53,22,1030,12,12
+Nicolas Pépé,Arsenal,F,19,CIV,24,1995-05-29,70.08,149.91,21,1084,18,11
+Sead Kolašinac,Arsenal,D,31,BIH,26,1993-06-20,72.05,180.78,24,999,15,11
+Alexandre Lacazette,Arsenal,F,9,FRA,28,1991-05-28,68.5,152.12,22,939,14,11
+Mesut Özil,Arsenal,M,10,GER,30,1988-10-15,70.87,167.55,23,910,11,11
+Bukayo Saka,Arsenal,M,77,ENG,17,2001-09-05,,,,697,12,7
+Dani Ceballos,Arsenal,M,8,ESP,22,1996-08-07,70.47,156.53,22,664,11,7
+Joe Willock,Arsenal,M,28,ENG,19,1999-08-20,,,,547,16,6
+Reiss Nelson,Arsenal,M,24,ENG,19,1999-12-10,68.9,154.32,22,439,9,5
+Kieran Tierney,Arsenal,D,3,SCO,22,1997-06-05,70.08,154.32,22,299,5,4
+Martinelli,Arsenal,M,35,BRA,18,2001-06-18,70.87,171.96,24,366,10,3
+Nacho Monreal,Arsenal,D,18,ESP,33,1986-02-26,70.47,158.73,22,270,3,3
+Héctor Bellerín,Arsenal,D,2,ESP,24,1995-03-19,70.08,163.14,23,263,3,3
+Shkodran Mustafi,Arsenal,D,20,GER,27,1992-04-17,72.44,180.78,24,170,3,1
+Henrikh Mkhitaryan,Arsenal,F,7,ARM,30,1989-01-21,69.69,165.34,23,111,3,1
+Emile Smith-Rowe,Arsenal,,32,ENG,19,2000-07-28,71.65,141.09,19,97,2,1
+Rob Holding,Arsenal,D,16,ENG,23,1994-11-09,74.41,165.34,21,77,1,1
+Tyreece John-Jules,Arsenal,F,45,ENG,18,2001-02-14,,,,0,0,0
+Emiliano Martínez,Arsenal,G,26,ARG,26,1992-09-02,76.77,194,23,0,0,0
+Konstantinos Mavropanos,Arsenal,D,27,GRE,21,1997-12-11,75.59,176.37,21,0,0,0
+Wesley Moraes,Aston Villa,F,9,BRA,22,1996-11-26,75.2,205.03,25,1790,21,21
+Tom Heaton,Aston Villa,G,1,ENG,33,1986-04-15,74.02,187.39,24,1795,20,20
+Jack Grealish,Aston Villa,M,10,ENG,23,1995-09-10,68.9,149.91,22,1704,19,19
+John McGinn,Aston Villa,M,7,SCO,24,1994-10-18,68.9,149.91,22,1538,18,18
+Tyrone Mings,Aston Villa,D,40,ENG,26,1993-03-13,75.2,169.75,21,1463,17,17
+Frederic Guilbert,Aston Villa,D,24,FRA,24,1994-12-24,70.08,154.32,22,1360,17,15
+Anwar El Ghazi,Aston Villa,F,21,NED,24,1995-05-03,74.02,167.55,21,1231,18,15
+Matt Targett,Aston Villa,D,18,ENG,23,1995-09-18,72.05,154.32,20,1151,14,14
+Douglas Luiz,Aston Villa,M,6,BRA,21,1998-05-09,70.08,143.3,20,1233,19,13
+Björn Engels,Aston Villa,D,22,BEL,24,1994-09-15,75.98,163.14,19,1222,14,13
+Marvelous Nakamba,Aston Villa,M,11,ZIM,25,1994-01-19,69.69,156.53,22,1152,14,13
+Trézéguet,Aston Villa,M,17,EGY,24,1994-10-01,69.29,158.73,23,1069,18,11
+Conor Hourihane,Aston Villa,M,14,IRL,28,1991-02-02,71.26,136.69,18,775,14,9
+Ezri Konsa,Aston Villa,F,15,ENG,21,1997-10-23,72.05,169.75,22,735,9,8
+Neil Taylor,Aston Villa,D,3,WAL,30,1989-02-07,68.9,141.09,20,703,9,7
+Ahmed Elmohamady,Aston Villa,D,27,EGY,31,1987-09-09,71.65,178.57,24,611,10,6
+Kortney Hause,Aston Villa,D,30,ENG,24,1995-07-16,74.41,185.19,23,450,5,5
+Jota,Aston Villa,M,23,ESP,28,1991-06-16,70.87,147.71,20,313,8,4
+Henri Lansbury,Aston Villa,M,8,ENG,28,1990-10-12,72.05,187.39,25,178,8,2
+Jed Steer,Aston Villa,G,12,ENG,26,1992-09-23,74.02,196.21,25,8,1,1
+Jonathan Kodjia,Aston Villa,F,26,CIV,29,1989-10-22,74.41,176.37,22,111,6,0
+Ørjan Nyland,Aston Villa,G,25,NOR,28,1990-09-10,75.59,171.96,21,87,2,0
+Keinan Davis,Aston Villa,,39,ENG,21,1998-06-01,66.14,149.91,24,74,6,0
+James Chester,Aston Villa,D,5,WAL,30,1989-01-23,70.87,158.73,22,0,0,0
+Aaron Ramsdale,Bournemouth,G,12,ENG,21,1998-05-14,74.02,169.75,21,1890,21,21
+Callum Wilson,Bournemouth,F,13,ENG,27,1992-02-27,70.87,145.5,20,1630,20,18
+Philip Billing,Bournemouth,M,29,DEN,23,1996-06-11,75.98,176.37,21,1505,19,18
+Steve Cook,Bournemouth,D,3,ENG,28,1991-04-19,72.83,180.78,23,1530,17,17
+Diego Rico,Bournemouth,D,21,ESP,26,1993-02-23,72.05,167.55,22,1435,17,17
+Jefferson Lerma,Bournemouth,M,8,COL,24,1994-10-25,70.47,154.32,21,1498,18,16
+Nathan Aké,Bournemouth,D,5,NED,24,1995-02-18,70.87,165.34,23,1385,16,16
+Joshua King,Bournemouth,F,7,NOR,27,1992-01-15,70.87,163.14,22,1311,16,15
+Ryan Fraser,Bournemouth,M,24,SCO,25,1994-02-24,64.17,154.32,26,1419,20,14
+Harry Wilson,Bournemouth,M,22,WAL,22,1997-03-22,68.11,154.32,23,1012,17,13
+Dominic Solanke,Bournemouth,F,9,ENG,21,1997-09-14,73.62,176.37,22,952,18,10
+Chris Mepham,Bournemouth,,33,WAL,21,1997-11-05,75.2,165.34,20,900,11,10
+Adam Smith,Bournemouth,D,15,ENG,28,1991-04-29,70.87,171.96,24,840,10,10
+Jack Stacey,Bournemouth,F,17,ENG,23,1996-04-06,70.87,149.91,20,798,9,9
+Lewis Cook,Bournemouth,M,16,ENG,22,1997-02-03,68.9,156.53,23,797,15,9
+Dan Gosling,Bournemouth,D,4,ENG,29,1990-02-02,72.05,174.16,23,464,8,5
+Simon Francis,Bournemouth,D,2,ENG,34,1985-02-16,72.05,198.41,26,458,9,5
+Arnaut Groeneveld,Bournemouth,M,14,NED,22,1997-01-31,70.08,163.14,23,407,9,4
+Charlie Daniels,Bournemouth,D,11,ENG,32,1986-09-07,70.08,165.34,23,127,2,2
+Jack Simpson,Bournemouth,D,25,ENG,22,1997-01-08,70.08,182.98,26,167,3,1
+Junior Stanislas,Bournemouth,M,19,ENG,29,1989-11-26,72.05,167.55,22,107,2,1
+Andrew Surman,Bournemouth,M,6,ENG,32,1986-08-20,70.08,158.73,22,56,3,0
+Jordon Ibe,Bournemouth,F,10,ENG,23,1995-12-08,69.29,178.57,26,48,2,0
+Artur Boruc,Bournemouth,G,1,POL,39,1980-02-20,75.98,191.8,23,0,0,0
+Mihai Dobre,Bournemouth,,54,ROU,20,1998-08-30,70.08,156.53,22,0,0,0
+Lloyd Kelly,Bournemouth,,26,ENG,20,1998-10-01,70.08,154.32,22,0,0,0
+Gavin Kilkenny,Bournemouth,M,53,IRL,19,2000-02-01,,,,0,0,0
+Christain Saydee,Bournemouth,F,65,LBR,17,2002-05-10,,,,0,0,0
+Mathew Ryan,Brighton & Hove Albion,G,1,AUS,27,1992-04-08,71.26,160.94,22,1890,21,21
+Dan Burn,Brighton & Hove Albion,D,33,ENG,27,1992-05-09,77.95,182.98,21,1822,21,21
+Lewis Dunk,Brighton & Hove Albion,D,5,ENG,27,1991-11-21,74.8,169.75,21,1710,19,19
+Davy Pröpper,Brighton & Hove Albion,M,24,NED,27,1991-09-02,72.83,158.73,21,1620,18,18
+Dale Stephens,Brighton & Hove Albion,M,6,ENG,30,1989-06-12,66.54,156.53,24,1601,19,18
+Neal Maupay,Brighton & Hove Albion,F,7,FRA,22,1996-08-14,67.32,152.12,23,1541,21,17
+Martín Montoya,Brighton & Hove Albion,D,22,ESP,28,1991-04-14,68.9,160.94,23,1387,18,17
+Adam Webster,Brighton & Hove Albion,D,15,ENG,24,1995-01-04,72.83,165.34,21,1386,16,16
+Pascal Groß,Brighton & Hove Albion,M,13,GER,28,1991-06-15,67.32,145.5,22,1244,18,15
+Aaron Mooy,Brighton & Hove Albion,M,18,AUS,28,1990-09-15,68.11,149.91,22,1056,15,13
+Steven Alzate,Brighton & Hove Albion,M,46,COL,20,1998-09-01,69.69,143.3,20,938,14,10
+Leandro Trossard,Brighton & Hove Albion,F,11,BEL,24,1994-12-04,67.72,134.48,20,876,15,10
+Shane Duffy,Brighton & Hove Albion,D,4,IRL,27,1992-01-01,75.98,167.55,20,801,12,8
+Aaron Connolly,Brighton & Hove Albion,F,44,IRL,19,2000-01-28,,,,721,14,8
+Solly March,Brighton & Hove Albion,M,20,ENG,25,1994-07-26,72.83,169.75,22,601,8,6
+Yves Bissouma,Brighton & Hove Albion,M,8,MLI,22,1996-08-30,71.26,171.96,23,405,10,5
+Glenn Murray,Brighton & Hove Albion,F,17,ENG,35,1983-09-25,72.05,176.37,23,398,13,3
+Bernardo,Brighton & Hove Albion,D,30,BRA,24,1995-05-14,73.23,167.55,21,211,5,2
+Alireza Jahanbakhsh,Brighton & Hove Albion,F,16,IRN,25,1993-10-08,72.83,171.96,22,128,3,1
+Ezequiel Schelotto,Brighton & Hove Albion,D,21,ITA,30,1989-05-23,73.62,167.55,21,124,4,1
+Jürgen Locadia,Brighton & Hove Albion,F,9,NED,25,1993-11-07,75.2,174.16,21,86,2,1
+Florin Andone,Brighton & Hove Albion,F,10,ROU,26,1993-04-11,70.87,171.96,24,71,3,1
+Gaëtan Bong,Brighton & Hove Albion,D,3,CMR,31,1988-04-25,72.05,163.14,22,56,4,0
+Leon Balogun,Brighton & Hove Albion,D,14,NGA,31,1988-06-28,74.8,178.57,22,0,0,0
+Tudor Băluță,Brighton & Hove Albion,D,28,ROU,20,1999-03-27,75.2,176.37,21,0,0,0
+David Button,Brighton & Hove Albion,G,27,ENG,30,1989-02-27,75.2,182.98,22,0,0,0
+Ben Mee,Burnley,D,6,ENG,29,1989-09-23,70.87,163.14,22,1890,21,21
+Nick Pope,Burnley,G,1,ENG,27,1992-04-19,75.2,167.55,20,1890,21,21
+James Tarkowski,Burnley,D,5,ENG,26,1992-11-19,72.83,178.57,23,1890,21,21
+Dwight McNeil,Burnley,M,11,ENG,19,1999-11-22,72.05,149.91,20,1815,21,21
+Jack Cork,Burnley,D,4,ENG,30,1989-06-25,72.83,152.12,20,1648,19,19
+Chris Wood,Burnley,F,9,NZL,27,1991-12-07,75.2,200.62,24,1565,19,19
+Ashley Westwood,Burnley,M,18,ENG,29,1990-04-01,66.93,178.57,28,1620,18,18
+Ashley Barnes,Burnley,F,10,AUT,29,1989-10-31,73.23,169.75,22,1361,19,17
+Erik Pieters,Burnley,D,23,NED,30,1988-08-07,72.05,182.98,24,1234,15,14
+Jeff Hendrick,Burnley,M,13,IRL,27,1992-01-31,72.83,174.16,23,1233,16,14
+Matthew Lowton,Burnley,D,2,ENG,30,1989-06-09,70.87,171.96,24,1080,12,12
+Phil Bardsley,Burnley,D,26,SCO,34,1985-06-28,70.87,171.96,24,810,9,9
+Charlie Taylor,Burnley,D,3,ENG,25,1993-09-18,68.9,154.32,22,656,9,7
+Jay Rodriguez,Burnley,F,19,ENG,30,1989-07-29,72.83,176.37,23,771,21,5
+Robbie Brady,Burnley,F,12,IRL,27,1992-01-14,68.9,152.12,22,396,13,5
+Jóhann Berg Guðmundsson,Burnley,F,7,ISL,28,1990-10-27,73.23,174.16,22,401,7,4
+Aaron Lennon,Burnley,F,25,ENG,32,1987-04-16,64.96,138.89,23,386,12,3
+Danny Drinkwater,Burnley,M,6,ENG,29,1990-03-05,70.08,174.16,24,59,1,1
+Matěj Vydra,Burnley,F,27,CZE,27,1992-05-01,70.87,160.94,22,83,5,0
+Kevin Long,Burnley,D,28,IRL,28,1990-08-18,74.02,182.98,23,2,1,0
+Anthony Driscoll-Glennon,Burnley,D,45,ENG,19,1999-11-26,,,,0,0,0
+Ben Gibson,Burnley,D,14,ENG,26,1993-01-15,72.83,171.96,22,0,0,0
+Mace Goodridge,Burnley,M,44,ENG,19,1999-09-13,,,,0,0,0
+Joe Hart,Burnley,G,20,ENG,32,1987-04-19,77.17,200.62,23,0,0,0
+Kepa Arrizabalaga,Chelsea,G,1,ESP,24,1994-10-03,74.41,185.19,23,1890,21,21
+Mason Mount,Chelsea,M,19,ENG,20,1999-01-10,70.08,141.09,20,1715,21,19
+César Azpilicueta,Chelsea,D,28,ESP,29,1989-08-28,70.08,171.96,24,1700,19,19
+Tammy Abraham,Chelsea,F,9,ENG,21,1997-10-02,74.8,158.73,19,1583,20,19
+Kurt Zouma,Chelsea,D,15,FRA,24,1994-10-27,74.8,211.64,26,1668,20,18
+Willian,Chelsea,M,10,BRA,30,1988-08-09,68.9,169.75,25,1454,20,16
+Jorginho,Chelsea,M,5,ITA,27,1991-12-21,70.87,143.3,20,1427,19,16
+Mateo Kovačić,Chelsea,M,17,CRO,25,1994-05-06,71.26,165.34,22,1331,20,14
+Fikayo Tomori,Chelsea,D,29,ENG,21,1997-12-19,72.44,165.34,22,1229,14,14
+N'Golo Kanté,Chelsea,M,7,FRA,28,1991-03-29,66.14,149.91,24,1124,14,12
+Christian Pulisic,Chelsea,M,22,USA,20,1998-09-18,68.11,138.89,21,1076,16,12
+Emerson Palmieri,Chelsea,D,33,ITA,24,1994-08-03,69.29,138.89,20,918,12,12
+Andreas Christensen,Chelsea,D,4,DEN,23,1996-04-10,74.02,149.91,19,672,8,8
+Marcos Alonso,Chelsea,D,3,ESP,28,1990-12-28,74.02,185.19,23,588,8,6
+Antonio Rüdiger,Chelsea,D,2,GER,26,1993-03-03,74.8,187.39,23,495,6,6
+Reece James,Chelsea,,24,ENG,19,1999-12-08,72.05,156.53,21,510,10,5
+Ross Barkley,Chelsea,M,8,ENG,25,1993-12-05,74.41,167.55,21,339,6,5
+Pedro,Chelsea,F,11,ESP,32,1987-07-28,66.54,143.3,22,312,5,4
+Callum Hudson-Odoi,Chelsea,M,20,ENG,18,2000-11-07,69.69,165.34,23,410,13,3
+Olivier Giroud,Chelsea,F,18,FRA,32,1986-09-30,75.59,194,23,191,5,2
+Michy Batshuayi,Chelsea,F,23,BEL,25,1993-10-02,72.83,189.6,25,118,12,0
+Tariq Lamptey,Chelsea,M,48,ENG,18,2000-09-30,,,,31,1,0
+Billy Gilmour,Chelsea,M,47,SCO,18,2001-06-11,,,,9,2,0
+Willy Caballero,Chelsea,G,13,ARG,37,1981-09-28,73.23,176.37,23,0,0,0
+Marc Guéhi,Chelsea,,44,ENG,19,2000-07-13,,,,0,0,0
+Kenedy,Chelsea,F,16,BRA,23,1996-02-08,71.65,169.75,23,0,0,0
+Wilfried Zaha,Crystal Palace,F,11,CIV,26,1992-11-10,70.87,145.5,20,1825,21,20
+Luka Milivojević,Crystal Palace,M,4,SRB,28,1991-04-07,72.05,165.34,22,1786,20,20
+James McArthur,Crystal Palace,M,18,SCO,31,1987-10-07,70.08,141.09,20,1738,20,20
+Jordan Ayew,Crystal Palace,F,9,GHA,27,1991-09-11,71.65,178.57,24,1673,20,20
+Vicente Guaita,Crystal Palace,G,31,ESP,32,1987-01-10,74.8,178.57,22,1710,19,19
+Cheikhou Kouyaté,Crystal Palace,D,8,SEN,29,1989-12-21,74.41,182.98,23,1466,19,17
+Patrick van Aanholt,Crystal Palace,D,3,NED,28,1990-08-29,68.9,147.71,21,1444,17,17
+Martin Kelly,Crystal Palace,D,34,ENG,29,1990-04-27,75.2,169.75,21,1308,16,14
+James Tomkins,Crystal Palace,D,5,ENG,30,1989-03-29,75.59,163.14,20,1163,13,13
+Joel Ward,Crystal Palace,D,2,ENG,29,1989-10-29,74.02,182.98,23,1104,13,13
+Gary Cahill,Crystal Palace,D,24,ENG,33,1985-12-19,75.98,189.6,23,1080,12,12
+Jeffrey Schlupp,Crystal Palace,D,15,GHA,26,1992-12-23,70.08,158.73,22,859,14,9
+Andros Townsend,Crystal Palace,F,10,ENG,28,1991-07-16,71.26,169.75,23,782,14,9
+Mamadou Sakho,Crystal Palace,D,12,FRA,29,1990-02-13,73.62,176.37,22,465,8,6
+Max Meyer,Crystal Palace,F,7,GER,23,1995-09-18,66.54,143.3,22,417,9,5
+James McCarthy,Crystal Palace,M,22,IRL,28,1990-11-12,70.87,158.73,22,529,16,4
+Christian Benteke,Crystal Palace,F,17,BEL,28,1990-12-03,74.8,182.98,22,486,15,4
+Scott Dann,Crystal Palace,D,6,ENG,32,1987-02-14,76.77,171.96,20,336,5,4
+Jaïro Riedewald,Crystal Palace,D,44,NED,22,1996-09-09,73.23,169.75,22,295,5,3
+Wayne Hennessey,Crystal Palace,G,13,WAL,32,1987-01-24,77.56,196.21,22,180,2,2
+Connor Wickham,Crystal Palace,F,21,ENG,26,1993-03-31,74.41,198.41,25,60,4,0
+Brandon Pierrick,Crystal Palace,M,40,ENG,17,2001-12-10,,,,7,1,0
+Víctor Camarasa,Crystal Palace,M,23,ESP,25,1994-05-28,72.05,167.55,22,5,1,0
+James Daly,Crystal Palace,F,41,ENG,19,2000-01-12,,,,0,0,0
+Stephen Henderson,Crystal Palace,G,19,IRL,31,1988-05-02,74.02,191.8,24,0,0,0
+Nya Kirby,Crystal Palace,,37,ENG,19,2000-01-31,68.11,145.5,22,0,0,0
+Tyrick Mitchell,Crystal Palace,D,39,ENG,19,1999-09-01,,,,0,0,0
+Sam Woods,Crystal Palace,D,35,ENG,20,1998-09-11,,,,0,0,0
+Jordan Pickford,Everton,G,1,ENG,25,1994-03-07,72.83,169.75,22,1890,21,21
+Richarlison,Everton,F,7,BRA,22,1997-05-10,70.47,156.53,22,1818,21,21
+Lucas Digne,Everton,D,12,FRA,26,1993-07-20,70.08,163.14,23,1710,20,20
+Yerry Mina,Everton,D,13,COL,24,1994-09-23,75.98,165.34,20,1630,19,18
+Gylfi Sigurðsson,Everton,M,10,ISL,29,1989-09-08,73.23,169.75,22,1485,20,17
+Michael Keane,Everton,D,5,ENG,26,1993-01-11,75.2,180.78,22,1369,17,15
+Dominic Calvert-Lewin,Everton,M,9,ENG,22,1997-03-16,69.29,141.09,20,1223,19,14
+Mason Holgate,Everton,D,2,ENG,22,1996-10-22,72.44,138.89,18,1097,14,12
+Djibril Sidibé,Everton,D,19,FRA,27,1992-07-29,71.65,160.94,22,1032,13,12
+Alex Iwobi,Everton,F,17,NGA,23,1996-05-03,70.87,165.34,23,1045,16,11
+Tom Davies,Everton,M,26,ENG,21,1998-06-30,70.87,154.32,21,1008,15,11
+Séamus Coleman,Everton,D,23,IRL,30,1988-10-11,69.69,147.71,21,949,13,11
+Fabian Delph,Everton,M,8,ENG,29,1989-11-21,68.5,132.28,19,839,11,9
+Morgan Schneiderlin,Everton,M,18,FRA,29,1989-11-08,71.26,165.34,22,741,11,9
+Bernard,Everton,F,20,BRA,26,1992-09-08,65.75,114.64,18,656,12,8
+Theo Walcott,Everton,F,11,ENG,30,1989-03-16,69.29,149.91,21,627,14,8
+André Gomes,Everton,M,21,POR,26,1993-07-30,74.02,185.19,23,585,8,7
+Moise Kean,Everton,F,27,ITA,19,2000-02-28,72.05,147.71,20,457,16,3
+Cenk Tosun,Everton,F,14,TUR,28,1991-06-07,72.05,171.96,23,290,5,2
+Leighton Baines,Everton,D,3,ENG,34,1984-12-11,66.93,163.14,25,153,3,1
+Jean-Philippe Gbamin,Everton,D,25,CIV,23,1995-05-25,73.23,182.98,23,135,2,1
+Oumar Niasse,Everton,F,29,SEN,29,1990-04-18,71.65,165.34,22,1,1,0
+Beni Baningime,Everton,M,34,COD,20,1998-09-09,,,,0,0,0
+Anthony Gordon,Everton,,42,ENG,18,2001-02-24,,,,0,0,0
+Jonas Lössl,Everton,G,49,DEN,30,1989-02-01,76.77,196.21,23,0,0,0
+Cuco Martina,Everton,D,30,CUW,29,1989-09-25,72.83,169.75,22,0,0,0
+Maarten Stekelenburg,Everton,G,22,NED,36,1982-09-22,77.56,202.82,23,0,0,0
+Kasper Schmeichel,Leicester City,G,1,DEN,32,1986-11-05,72.83,167.55,22,1890,21,21
+Jonny Evans,Leicester City,D,6,NIR,31,1988-01-02,74.02,169.75,21,1856,21,21
+Ricardo Pereira,Leicester City,D,21,POR,25,1993-10-06,68.9,154.32,22,1800,20,20
+Çağlar Söyüncü,Leicester City,D,4,TUR,23,1996-05-23,73.62,176.37,22,1800,20,20
+Youri Tielemans,Leicester City,M,8,BEL,22,1997-05-07,69.29,158.73,23,1759,20,20
+Wilfred Ndidi,Leicester City,D,25,NGA,22,1996-12-16,73.62,176.37,22,1730,20,19
+Jamie Vardy,Leicester City,F,9,ENG,32,1987-01-11,70.08,167.55,23,1710,19,19
+James Maddison,Leicester City,M,10,ENG,22,1996-11-23,70.47,160.94,22,1684,20,19
+Ben Chilwell,Leicester City,D,3,ENG,22,1996-12-21,70.08,156.53,22,1520,17,17
+Ayoze Pérez,Leicester City,F,17,ESP,26,1993-07-23,70.47,145.5,20,1127,18,15
+Harvey Barnes,Leicester City,M,15,ENG,21,1997-12-09,68.5,145.5,21,1083,19,13
+Dennis Praet,Leicester City,M,26,BEL,25,1994-05-14,71.26,171.96,23,560,14,6
+Hamza Choudhury,Leicester City,M,20,ENG,21,1997-10-01,70.08,141.09,20,459,12,5
+Christian Fuchs,Leicester City,D,28,AUT,33,1986-04-07,73.23,176.37,23,454,6,5
+Kelechi Iheanacho,Leicester City,F,14,NGA,22,1996-10-03,73.62,169.75,22,284,5,4
+Demarai Gray,Leicester City,M,7,ENG,23,1996-06-28,70.47,145.5,20,388,13,2
+Marc Albrighton,Leicester City,M,11,ENG,29,1989-11-18,68.5,147.71,22,353,11,2
+Wes Morgan,Leicester City,D,5,JAM,35,1984-01-21,72.83,205.03,27,152,6,1
+James Justin,Leicester City,M,2,ENG,21,1997-07-11,72.05,156.53,21,110,3,1
+Nampalys Mendy,Leicester City,M,24,FRA,27,1992-06-23,66.14,149.91,24,71,2,1
+Danny Ward,Leicester City,G,12,WAL,26,1993-06-22,75.2,194,24,0,0,0
+Virgil van Dijk,Liverpool,D,4,NED,28,1991-07-08,75.98,202.82,24,1800,20,20
+Trent Alexander-Arnold,Liverpool,D,66,ENG,20,1998-10-07,68.9,152.12,22,1753,20,19
+Andrew Robertson,Liverpool,D,26,SCO,25,1994-03-11,70.08,138.89,19,1725,20,19
+Georginio Wijnaldum,Liverpool,M,5,NED,28,1990-11-11,68.9,152.12,22,1590,19,19
+Roberto Firmino,Liverpool,F,9,BRA,27,1991-10-02,71.26,167.55,23,1630,20,18
+Sadio Mané,Liverpool,F,10,SEN,27,1992-04-10,68.9,152.12,22,1587,19,18
+Mohamed Salah,Liverpool,F,11,EGY,27,1992-06-15,68.9,158.73,23,1445,17,17
+Jordan Henderson,Liverpool,M,14,ENG,29,1990-06-17,71.65,147.71,20,1353,19,16
+Alisson,Liverpool,G,1,BRA,26,1992-10-02,75.2,200.62,24,1014,12,12
+Fabinho,Liverpool,D,3,BRA,25,1993-10-23,73.62,171.96,22,1006,12,11
+Adrián,Liverpool,G,13,ESP,32,1987-01-03,74.8,176.37,22,783,10,8
+Dejan Lovren,Liverpool,D,6,CRO,30,1989-07-05,74.02,185.19,23,670,8,8
+Joël Matip,Liverpool,D,32,CMR,27,1991-08-08,76.77,198.41,23,630,7,7
+James Milner,Liverpool,M,7,ENG,33,1986-01-04,68.9,154.32,22,663,16,6
+Joe Gomez,Liverpool,D,12,ENG,22,1997-05-23,74.02,169.75,21,556,11,6
+Alex Oxlade-Chamberlain,Liverpool,M,15,ENG,25,1993-08-15,70.87,154.32,21,511,12,5
+Divock Origi,Liverpool,F,27,BEL,24,1995-04-18,72.83,165.34,21,401,16,4
+Adam Lallana,Liverpool,F,20,ENG,31,1988-05-10,67.72,160.94,24,283,10,3
+Naby Keïta,Liverpool,M,8,GUI,24,1995-02-10,67.72,141.09,21,197,5,2
+Xherdan Shaqiri,Liverpool,M,23,SUI,27,1991-10-10,66.54,158.73,25,174,5,2
+Curtis Jones,Liverpool,M,48,ENG,18,2001-01-30,,,,14,1,0
+Harvey Elliot,Liverpool,F,67,ENG,,2003-04-04,,,,0,1,0
+Rhian Brewster,Liverpool,F,24,ENG,19,2000-04-01,69.29,165.34,24,0,0,0
+Caoimhin Kelleher,Liverpool,G,62,IRL,20,1998-11-23,,,,0,0,0
+Andy Lonergan,Liverpool,G,22,IRL,35,1983-10-19,75.59,191.8,23,0,0,0
+Nathaniel Phillips,Liverpool,D,47,ENG,22,1997-03-21,74.8,154.32,19,0,0,0
+Neco Williams,Liverpool,D,76,WAL,18,2001-04-13,,,,0,0,0
+Raheem Sterling,Manchester City,F,7,ENG,24,1994-12-08,66.93,152.12,23,1671,20,19
+Kevin De Bruyne,Manchester City,M,17,BEL,28,1991-06-28,71.26,149.91,20,1654,20,19
+Ederson,Manchester City,G,31,BRA,25,1993-08-17,74.02,196.21,25,1541,18,18
+Kyle Walker,Manchester City,D,2,ENG,29,1990-05-28,72.05,182.98,24,1449,17,17
+Fernandinho,Manchester City,M,25,BRA,34,1985-05-04,70.47,147.71,20,1484,17,16
+Rodri,Manchester City,M,16,ESP,23,1996-06-22,74.8,171.96,21,1435,19,16
+İlkay Gündoğan,Manchester City,M,8,GER,28,1990-10-24,70.87,176.37,24,1199,19,13
+Bernardo Silva,Manchester City,F,20,POR,24,1994-08-10,68.11,136.69,20,1180,18,13
+David Silva,Manchester City,M,21,ESP,33,1986-01-08,68.11,147.71,22,1024,16,13
+Riyad Mahrez,Manchester City,F,26,ALG,28,1991-02-21,70.47,136.69,19,995,17,11
+Nicolás Otamendi,Manchester City,D,30,ARG,31,1988-02-12,72.05,178.57,24,994,13,11
+Sergio Agüero,Manchester City,F,10,ARG,31,1988-06-02,68.11,154.32,23,908,15,11
+Gabriel Jesus,Manchester City,F,9,BRA,22,1997-04-03,68.9,160.94,23,1000,17,10
+Benjamin Mendy,Manchester City,D,22,FRA,25,1994-07-17,70.87,158.73,22,743,9,9
+John Stones,Manchester City,D,5,ENG,25,1994-05-28,74.02,154.32,19,700,9,8
+Oleksandr Zinchenko,Manchester City,M,11,UKR,22,1996-12-15,68.9,134.48,19,680,9,7
+João Cancelo,Manchester City,D,27,POR,25,1994-05-27,71.65,163.14,22,486,7,5
+Angeliño,Manchester City,D,12,ESP,22,1997-01-04,69.29,149.91,21,422,6,4
+Aymeric Laporte,Manchester City,D,14,FRA,25,1994-05-27,75.2,191.8,23,307,4,4
+Claudio Bravo,Manchester City,G,1,CHI,36,1983-04-13,72.44,176.37,23,346,4,3
+Eric García,Manchester City,D,50,ESP,18,2001-01-09,71.65,174.16,23,257,5,2
+Phil Foden,Manchester City,M,47,ENG,19,2000-05-28,,,,232,11,2
+Scott Carson,Manchester City,G,33,ENG,33,1985-09-03,72.05,189.6,25,0,0,0
+David de Gea,Manchester United,G,1,ESP,28,1990-11-07,75.59,167.55,20,1890,21,21
+Harry Maguire,Manchester United,D,5,ENG,26,1993-03-05,74.02,174.16,22,1890,21,21
+Marcus Rashford,Manchester United,F,10,ENG,21,1997-10-31,70.87,154.32,21,1823,21,21
+Victor Lindelöf,Manchester United,D,2,SWE,25,1994-07-17,73.62,180.78,23,1800,20,20
+Daniel James,Manchester United,M,21,WAL,21,1997-11-10,70.87,167.55,23,1637,20,19
+Aaron Wan-Bissaka,Manchester United,D,29,ENG,21,1997-11-26,72.05,158.73,21,1611,18,18
+Scott McTominay,Manchester United,M,39,SCO,22,1996-12-08,70.08,143.3,20,1454,17,17
+Fred,Manchester United,F,17,BRA,26,1993-03-05,66.54,149.91,23,1318,17,14
+Anthony Martial,Manchester United,F,9,FRA,23,1995-12-05,71.26,167.55,23,1198,15,14
+Andreas Pereira,Manchester United,M,15,BRA,23,1996-01-01,69.69,145.5,21,1181,18,14
+Ashley Young,Manchester United,D,18,ENG,34,1985-07-09,68.9,143.3,21,954,12,10
+Jesse Lingard,Manchester United,F,14,ENG,26,1992-12-15,68.9,136.69,20,868,18,9
+Luke Shaw,Manchester United,D,23,ENG,24,1995-07-12,72.83,165.34,21,677,11,8
+Paul Pogba,Manchester United,M,6,FRA,26,1993-03-15,75.2,185.19,23,521,7,5
+Juan Mata,Manchester United,F,8,ESP,31,1988-04-28,66.93,138.89,21,431,12,5
+Brandon Williams,Manchester United,D,53,ENG,18,2000-09-03,,,,358,6,4
+Nemanja Matić,Manchester United,M,31,SRB,30,1988-08-01,76.38,187.39,22,331,5,4
+Mason Greenwood,Manchester United,M,26,ENG,17,2001-10-01,,,,396,16,2
+Axel Tuanzebe,Manchester United,D,38,ENG,21,1997-11-14,71.65,165.34,22,186,5,2
+Marcos Rojo,Manchester United,D,16,ARG,29,1990-03-20,73.62,176.37,22,120,3,1
+Diogo Dalot,Manchester United,D,20,POR,20,1999-03-18,72.44,165.34,22,60,1,1
+Phil Jones,Manchester United,D,4,ENG,27,1992-02-21,70.87,156.53,21,45,1,1
+Tahith Chong,Manchester United,,44,NED,19,1999-12-04,72.83,154.32,20,24,2,0
+Angel Gomes,Manchester United,M,28,ENG,18,2000-08-31,,,,9,1,0
+James Garner,Manchester United,M,37,ENG,18,2001-03-13,,,,8,1,0
+Lee Grant,Manchester United,G,13,ENG,36,1983-01-27,75.98,182.98,22,0,0,0
+Sergio Romero,Manchester United,G,22,ARG,32,1987-02-22,75.59,191.8,23,0,0,0
+Martin Dúbravka,Newcastle United,G,1,SVK,30,1989-01-15,74.8,182.98,22,1890,21,21
+Miguel Almirón,Newcastle United,M,24,PAR,25,1994-02-01,69.69,154.32,22,1679,20,20
+Joelinton,Newcastle United,F,9,BRA,22,1996-08-14,74.8,167.55,21,1613,21,20
+Isaac Hayden,Newcastle United,D,14,ENG,24,1995-03-22,73.62,174.16,22,1456,17,17
+Jetro Willems,Newcastle United,D,15,NED,25,1994-03-30,66.54,145.5,23,1396,17,16
+Fabian Schär,Newcastle United,D,5,SUI,27,1991-12-20,74.02,185.19,23,1288,15,14
+Paul Dummett,Newcastle United,D,3,WAL,27,1991-09-26,70.08,143.3,20,1216,15,13
+Jonjo Shelvey,Newcastle United,M,8,ENG,27,1992-02-27,72.05,154.32,20,1077,14,13
+Federico Fernández,Newcastle United,D,18,ARG,30,1989-02-21,74.8,182.98,22,1103,15,12
+Jamaal Lascelles,Newcastle United,D,6,ENG,25,1993-12-11,74.02,182.98,23,1002,12,12
+Allan Saint-Maximin,Newcastle United,F,10,FRA,22,1997-03-12,68.11,147.71,22,823,12,10
+Sean Longstaff,Newcastle United,M,36,ENG,21,1997-10-30,71.26,143.3,19,875,14,9
+Javier Manquillo,Newcastle United,D,19,ESP,25,1994-05-05,70.87,165.34,23,800,11,9
+Ciaran Clark,Newcastle United,D,2,IRL,29,1989-09-26,74.02,167.55,21,765,9,9
+DeAndre Yedlin,Newcastle United,D,22,USA,26,1993-07-09,68.11,149.91,22,718,11,7
+Christian Atsu,Newcastle United,F,30,GHA,27,1992-01-10,67.72,149.91,22,609,16,5
+Emil Krafth,Newcastle United,D,17,SWE,24,1994-08-02,72.44,182.98,24,464,9,5
+Andy Carroll,Newcastle United,F,7,ENG,30,1989-01-06,75.98,174.16,21,497,12,4
+Matthew Longstaff,Newcastle United,M,43,ENG,19,2000-03-21,,,,360,4,4
+Florian Lejeune,Newcastle United,D,20,FRA,28,1991-05-20,74.02,178.57,22,344,4,4
+Matt Ritchie,Newcastle United,M,11,SCO,29,1989-09-10,68.11,154.32,23,270,3,3
+Yoshinori Mutō,Newcastle United,M,13,JPN,27,1992-07-15,70.08,152.12,21,201,7,2
+Dwight Gayle,Newcastle United,F,12,ENG,28,1990-10-20,69.69,160.94,23,151,8,1
+Ki Sung-yueng,Newcastle United,M,4,KOR,30,1989-01-24,73.23,165.34,21,136,3,1
+Karl Darlow,Newcastle United,G,26,ENG,28,1990-10-08,72.83,174.16,23,0,0,0
+Rob Elliot,Newcastle United,G,21,IRL,33,1986-04-30,74.8,216.05,27,0,0,0
+Teemu Pukki,Norwich City,F,22,FIN,29,1990-03-29,69.29,145.5,21,1870,21,21
+Max Aarons,Norwich City,M,2,ENG,19,2000-01-04,69.29,152.12,22,1710,19,19
+Tim Krul,Norwich City,G,1,NED,31,1988-04-03,74.02,163.14,20,1710,19,19
+Emi Buendía,Norwich City,F,17,ARG,22,1996-12-25,66.93,143.3,22,1595,21,18
+Kenny McLean,Norwich City,M,23,SCO,27,1992-01-08,72.05,154.32,20,1569,20,17
+Ben Godfrey,Norwich City,M,4,ENG,21,1998-01-15,72.05,163.14,22,1490,17,17
+Todd Cantwell,Norwich City,,14,ENG,21,1998-02-27,69.69,145.5,21,1456,21,17
+Jamal Lewis,Norwich City,,12,NIR,21,1998-01-25,70.08,154.32,22,1155,14,13
+Alexander Tettey,Norwich City,M,27,NOR,33,1986-04-04,70.87,149.91,20,1113,15,13
+Tom Trybull,Norwich City,D,19,GER,26,1993-03-09,71.26,158.73,21,1029,14,12
+Marco Stiepermann,Norwich City,F,18,GER,28,1991-02-09,70.87,165.34,23,929,16,11
+Sam Byram,Norwich City,D,3,ENG,25,1993-09-16,70.87,158.73,22,906,12,10
+Christoph Zimmermann,Norwich City,D,6,GER,26,1993-01-12,76.38,202.82,24,846,10,10
+Ibrahim Amadou,Norwich City,D,24,FRA,26,1993-04-06,72.05,171.96,23,731,10,8
+Onel Hernández,Norwich City,F,11,CUB,26,1993-02-01,67.72,152.12,23,720,14,7
+Moritz Leitner,Norwich City,M,10,GER,26,1992-12-08,68.5,143.3,21,685,9,7
+Grant Hanley,Norwich City,D,5,SCO,27,1991-11-20,74.02,167.55,21,630,7,7
+Mario Vrančić,Norwich City,M,8,BIH,30,1989-05-23,73.23,165.34,21,289,9,3
+Michael McGovern,Norwich City,G,33,NIR,35,1984-07-12,75.2,196.21,24,158,2,1
+Ralf Fährmann,Norwich City,G,21,GER,30,1988-09-27,76.38,196.21,23,22,1,1
+Josip Drmić,Norwich City,F,20,SUI,26,1992-08-08,71.65,154.32,21,115,8,0
+Dennis Srbeny,Norwich City,M,32,GER,25,1994-05-05,74.8,182.98,22,39,8,0
+Patrick Roberts,Norwich City,F,7,ENG,22,1997-02-05,65.75,127.87,20,23,3,0
+Adam Idah,Norwich City,F,35,IRL,18,2001-02-11,74.8,182.98,22,0,1,0
+Akin Famewo,Norwich City,D,43,ENG,20,1998-11-09,70.87,145.5,20,0,0,0
+Philip Heise,Norwich City,D,16,GER,28,1991-06-20,72.44,171.96,23,0,0,0
+Timm Klose,Norwich City,D,15,SUI,31,1988-05-09,75.98,191.8,23,0,0,0
+Archie Mair,Norwich City,G,60,SCO,18,2001-02-10,,,,0,0,0
+George Baldock,Sheffield United,D,2,ENG,26,1993-01-26,68.9,147.71,21,1890,21,21
+Jack O'Connell,Sheffield United,D,5,ENG,25,1994-03-29,75.2,187.39,23,1890,21,21
+Enda Stevens,Sheffield United,D,3,IRL,29,1990-07-09,72.05,171.96,23,1890,21,21
+Chris Basham,Sheffield United,D,6,ENG,31,1988-07-20,70.87,176.37,24,1836,21,21
+Oliver Norwood,Sheffield United,M,16,NIR,28,1991-04-12,70.87,167.55,23,1752,21,21
+Dean Henderson,Sheffield United,G,1,ENG,22,1997-03-12,74.8,187.39,23,1800,20,20
+John Egan,Sheffield United,D,12,IRL,26,1992-10-20,72.83,165.34,21,1789,20,20
+John Lundstram,Sheffield United,M,7,ENG,25,1994-02-18,71.26,163.14,22,1770,20,20
+John Fleck,Sheffield United,F,4,SCO,27,1991-08-24,68.9,158.73,23,1559,18,18
+David McGoldrick,Sheffield United,F,17,IRL,31,1987-11-29,72.83,165.34,21,1266,18,15
+Lys Mousset,Sheffield United,M,22,FRA,23,1996-02-08,72.44,176.37,23,859,18,9
+Callum Robinson,Sheffield United,F,11,IRL,24,1995-02-02,70.08,165.34,23,641,14,9
+Oliver McBurnie,Sheffield United,F,9,SCO,23,1996-06-04,74.02,145.5,18,811,19,8
+Luke Freeman,Sheffield United,F,8,ENG,27,1992-03-22,72.05,141.09,19,322,9,3
+Billy Sharp,Sheffield United,F,10,ENG,33,1986-02-05,68.9,154.32,22,283,11,1
+Muhamed Bešić,Sheffield United,D,27,BIH,26,1992-09-10,70.87,176.37,24,133,6,1
+Phil Jagielka,Sheffield United,D,15,ENG,36,1982-08-17,72.05,182.98,24,128,4,1
+Simon Moore,Sheffield United,G,25,ENG,29,1990-05-19,75.2,182.98,22,90,1,1
+Ben Osborn,Sheffield United,M,23,ENG,24,1994-08-05,69.29,165.34,24,50,4,0
+Leon Clarke,Sheffield United,F,24,ENG,34,1985-02-10,74.02,198.41,25,13,1,0
+Ravel Morrison,Sheffield United,M,14,ENG,26,1993-02-02,68.9,156.53,23,12,1,0
+Kieron Freeman,Sheffield United,D,18,WAL,27,1992-03-21,70.08,174.16,24,0,0,0
+Richard Stearman,Sheffield United,D,19,ENG,31,1987-08-19,74.02,147.71,18,0,0,0
+Michael Verrips,Sheffield United,G,21,NED,22,1996-12-03,76.77,187.39,22,0,0,0
+James Ward-Prowse,Southampton,M,16,ENG,24,1994-11-01,68.11,145.5,22,1890,21,21
+Jan Bednarek,Southampton,D,35,POL,23,1996-04-12,74.41,169.75,21,1888,21,21
+Pierre Højbjerg,Southampton,M,23,DEN,23,1995-08-05,72.83,185.19,24,1727,20,19
+Nathan Redmond,Southampton,M,22,ENG,25,1994-03-06,68.11,152.12,23,1612,19,19
+Danny Ings,Southampton,F,9,ENG,27,1992-03-16,70.08,160.94,23,1447,21,17
+Ryan Bertrand,Southampton,D,21,ENG,29,1989-08-05,70.47,187.39,26,1303,16,15
+Cédric Soares,Southampton,D,2,POR,27,1991-08-31,67.72,147.71,22,1108,13,13
+Oriol Romeu,Southampton,M,14,ESP,27,1991-09-24,72.05,182.98,24,1127,17,12
+Jack Stephens,Southampton,D,5,ENG,25,1994-01-27,72.83,165.34,21,1108,13,12
+Alex McCarthy,Southampton,G,1,ENG,29,1989-12-03,75.98,174.16,21,990,11,11
+Jannik Vestergaard,Southampton,D,4,DEN,26,1992-08-03,77.56,211.64,24,934,11,11
+Angus Gunn,Southampton,G,28,ENG,23,1996-01-22,77.17,169.75,20,900,10,10
+Che Adams,Southampton,F,10,ENG,23,1996-07-13,70.08,145.5,20,634,15,8
+Moussa Djenepo,Southampton,M,12,MLI,21,1998-06-15,69.69,143.3,20,644,12,7
+Yan Valery,Southampton,D,43,FRA,20,1999-02-22,,,,558,8,7
+Stuart Armstrong,Southampton,M,17,SCO,27,1992-03-30,72.05,165.34,22,631,15,6
+Maya Yoshida,Southampton,D,3,JPN,30,1988-08-24,74.41,171.96,21,558,8,6
+Sofiane Boufal,Southampton,M,19,MAR,25,1993-09-17,66.93,132.28,20,561,14,5
+Shane Long,Southampton,F,7,IRL,32,1987-01-22,70.08,154.32,22,526,11,5
+Kevin Danso,Southampton,M,38,AUT,20,1998-09-19,74.8,165.34,20,275,6,3
+Michael Obafemi,Southampton,F,20,IRL,19,2000-07-06,,,,272,9,3
+Fraser Forster,Southampton,G,44,ENG,31,1988-03-17,79.13,205.03,23,0,0,0
+Harry Lewis,Southampton,G,41,ENG,21,1997-12-20,75.2,169.75,21,0,0,0
+Dan Nlundulu,Southampton,F,40,ENG,20,1999-02-05,,,,0,0,0
+William Smallbone,Southampton,M,27,IRL,19,2000-02-21,,,,0,0,0
+Toby Alderweireld,Tottenham Hotspur,D,4,BEL,30,1989-03-02,73.62,200.62,26,1800,20,20
+Harry Kane,Tottenham Hotspur,F,10,ENG,26,1993-07-28,74.02,189.6,24,1780,20,20
+Moussa Sissoko,Tottenham Hotspur,M,17,FRA,29,1989-08-16,73.62,200.62,26,1690,20,19
+Serge Aurier,Tottenham Hotspur,D,24,CIV,26,1992-12-24,68.9,165.34,24,1358,16,16
+Davinson Sánchez,Tottenham Hotspur,D,6,COL,23,1996-06-12,73.62,182.98,23,1350,16,15
+Son Heung-min,Tottenham Hotspur,F,7,KOR,27,1992-07-08,72.05,169.75,22,1298,16,15
+Paulo Gazzaniga,Tottenham Hotspur,G,22,ARG,27,1992-01-02,77.17,198.41,23,1342,15,14
+Jan Vertonghen,Tottenham Hotspur,D,5,BEL,32,1987-04-24,74.41,194,24,1199,14,14
+Dele Alli,Tottenham Hotspur,M,20,ENG,23,1996-04-11,74.02,176.37,22,1166,14,13
+Harry Winks,Tottenham Hotspur,M,8,ENG,23,1996-02-02,69.29,163.14,23,998,16,12
+Lucas Moura,Tottenham Hotspur,F,63,BRA,26,2002-06-21,,,,1014,19,11
+Tanguy Ndombele,Tottenham Hotspur,M,28,FRA,22,1996-12-28,69.29,149.91,21,802,15,10
+Christian Eriksen,Tottenham Hotspur,D,23,DEN,27,1992-02-14,71.65,167.55,22,978,17,9
+Danny Rose,Tottenham Hotspur,D,3,ENG,29,1990-07-02,68.5,167.55,25,825,11,9
+Érik Lamela,Tottenham Hotspur,F,11,ARG,27,1992-03-25,71.26,176.37,24,638,11,7
+Eric Dier,Tottenham Hotspur,D,15,ENG,25,1994-01-15,74.02,198.41,25,611,9,7
+Hugo Lloris,Tottenham Hotspur,G,1,FRA,32,1986-12-26,74.02,180.78,23,548,7,7
+Ben Davies,Tottenham Hotspur,D,33,WAL,26,1993-04-24,71.65,167.55,22,361,6,4
+Ryan Sessegnon,Tottenham Hotspur,D,19,ENG,19,2000-05-18,70.08,156.53,22,251,5,3
+Kyle Walker-Peters,Tottenham Hotspur,D,16,ENG,22,1997-04-13,68.11,136.69,20,242,3,3
+Giovani Lo Celso,Tottenham Hotspur,M,18,ARG,23,1996-04-09,66.93,149.91,23,333,11,2
+Juan Foyth,Tottenham Hotspur,D,21,ARG,21,1998-01-12,70.47,152.12,21,65,4,1
+Victor Wanyama,Tottenham Hotspur,M,12,KEN,28,1991-06-25,72.44,191.8,25,23,2,0
+Oliver Skipp,Tottenham Hotspur,M,29,ENG,18,2000-09-16,68.9,154.32,22,10,3,0
+Troy Parrott,Tottenham Hotspur,F,52,IRL,17,2002-02-04,68.9,158.73,23,5,1,0
+Georges-Kévin N'Koudou,Tottenham Hotspur,M,14,FRA,24,1995-02-13,68.9,160.94,23,2,1,0
+Brandon Austin,Tottenham Hotspur,G,49,ENG,20,1999-01-08,74.02,180.78,23,0,0,0
+Japhet Tanganga,Tottenham Hotspur,D,39,ENG,20,1999-03-31,72.44,160.94,21,0,0,0
+Michel Vorm,Tottenham Hotspur,G,13,NED,35,1983-10-20,72.44,185.19,24,0,0,0
+Alfie Whiteman,Tottenham Hotspur,G,41,ENG,20,1998-10-02,74.8,169.75,21,0,0,0
+Ben Foster,Watford,G,26,ENG,36,1983-04-03,75.98,198.41,24,1890,21,21
+Abdoulaye Doucouré,Watford,M,16,FRA,26,1993-01-01,72.44,167.55,22,1745,20,20
+Craig Cathcart,Watford,D,15,NIR,30,1989-02-06,74.8,182.98,22,1635,19,19
+Gerard Deulofeu,Watford,F,7,ESP,25,1994-03-13,69.69,160.94,23,1542,21,18
+Étienne Capoue,Watford,M,29,FRA,31,1988-07-11,74.8,191.8,24,1420,16,16
+Kiko Femenía,Watford,F,21,ESP,28,1991-02-02,68.5,134.48,20,1346,17,15
+Will Hughes,Watford,M,19,ENG,24,1995-04-17,72.83,163.14,21,1162,17,14
+Craig Dawson,Watford,D,4,ENG,29,1990-05-06,74.02,187.39,24,1189,16,13
+Christian Kabasele,Watford,D,27,BEL,28,1991-02-24,74.02,189.6,24,1124,13,13
+José Holebas,Watford,D,25,GRE,35,1984-06-27,72.83,178.57,23,1006,12,11
+Ismaila Sarr,Watford,M,23,SEN,21,1998-02-25,70.08,149.91,21,862,14,9
+Troy Deeney,Watford,F,9,ENG,31,1988-06-29,72.83,222.66,29,816,10,9
+Roberto Pereyra,Watford,M,37,ARG,28,1991-01-07,71.65,169.75,23,874,15,8
+Adrian Mariappa,Watford,D,6,JAM,32,1986-10-03,70.87,171.96,24,776,10,8
+Tom Cleverley,Watford,M,8,ENG,29,1989-08-12,68.9,147.71,21,647,9,8
+Andre Gray,Watford,F,18,ENG,28,1991-06-26,70.08,182.98,26,701,17,7
+Daryl Janmaat,Watford,D,2,NED,30,1989-07-22,72.83,176.37,23,608,8,7
+Adam Masina,Watford,D,11,ITA,25,1994-01-02,75.2,191.8,23,502,9,5
+Nathaniel Chalobah,Watford,D,14,ENG,24,1994-12-12,73.62,176.37,22,476,10,5
+Danny Welbeck,Watford,F,10,ENG,28,1990-11-26,72.83,160.94,21,210,5,3
+Dimitri Foulquier,Watford,D,36,FRA,26,1993-03-23,72.05,169.75,22,58,3,1
+Sebastian Prödl,Watford,D,5,AUT,32,1987-06-21,77.17,213.85,25,57,1,1
+Isaac Success,Watford,F,22,NGA,23,1996-01-07,71.65,198.41,27,50,4,0
+Domingos Quina,Watford,M,20,POR,19,1999-11-18,70.47,143.3,20,14,3,0
+Tom Dele-Bashiru,Watford,M,24,NGA,19,1999-09-17,,,,0,0,0
+Heurelho Gomes,Watford,G,1,BRA,38,1981-02-15,77.56,209.44,24,0,0,0
+Ken Sema,Watford,M,12,SWE,25,1993-09-30,69.69,152.12,22,0,0,0
+Declan Rice,West Ham United,D,41,ENG,20,1999-01-14,72.83,176.37,23,1800,20,20
+Ryan Fredericks,West Ham United,D,24,ENG,26,1992-10-10,68.11,158.73,24,1538,18,17
+Sébastien Haller,West Ham United,F,22,FRA,25,1994-06-22,73.62,165.34,21,1493,19,17
+Mark Noble,West Ham United,M,16,ENG,32,1987-05-08,70.87,154.32,21,1346,17,17
+Felipe Anderson,West Ham United,F,8,BRA,26,1993-04-15,68.9,154.32,22,1257,18,17
+Angelo Ogbonna,West Ham United,D,21,ITA,31,1988-05-23,75.2,189.6,23,1350,15,15
+Issa Diop,West Ham United,D,23,FRA,22,1997-01-09,75.98,185.19,22,1236,15,14
+Aaron Cresswell,West Ham United,D,3,ENG,29,1989-12-15,66.93,145.5,22,1215,14,14
+Pablo Fornals,West Ham United,M,18,ESP,23,1996-02-22,70.08,147.71,21,1107,19,12
+Robert Snodgrass,West Ham United,F,11,SCO,31,1987-09-07,71.65,180.78,24,1004,15,11
+Fabián Balbuena,West Ham United,D,4,PAR,27,1991-08-23,74.02,180.78,23,990,12,11
+Andriy Yarmolenko,West Ham United,F,7,UKR,29,1989-10-23,73.62,167.55,21,828,15,9
+Łukasz Fabiański,West Ham United,G,1,POL,34,1985-04-18,74.8,182.98,22,754,9,9
+Manuel Lanzini,West Ham United,M,10,ARG,26,1993-02-15,65.75,130.07,21,856,14,8
+Roberto,West Ham United,G,13,ESP,33,1986-02-10,75.59,205.03,25,686,8,7
+Arthur Masuaku,West Ham United,D,26,COD,25,1993-11-07,70.47,154.32,21,569,9,6
+Michail Antonio,West Ham United,F,30,ENG,29,1990-03-28,70.87,180.78,25,551,9,5
+David Martin,West Ham United,G,25,ENG,33,1986-01-22,73.23,189.6,24,360,4,4
+Pablo Zabaleta,West Ham United,D,5,ARG,34,1985-01-16,69.29,163.14,23,289,6,3
+Jack Wilshere,West Ham United,M,19,ENG,27,1992-01-01,66.93,143.3,22,175,6,2
+Carlos Sánchez,West Ham United,M,15,COL,33,1986-02-06,71.65,180.78,24,113,6,1
+Javier Hernández,West Ham United,F,9,MEX,31,1988-06-01,67.72,136.69,20,107,2,1
+Albian Ajeti,West Ham United,F,27,SUI,22,1997-02-26,71.65,165.34,22,121,7,0
+Nathan Holland,West Ham United,F,37,ENG,21,1998-06-19,70.08,154.32,22,31,2,0
+Joseph Anang,West Ham United,G,49,GHA,19,2000-06-08,72.05,158.73,21,0,0,0
+Winston Reid,West Ham United,D,2,NZL,31,1988-07-03,74.8,191.8,24,0,0,0
+Conor Coady,Wolverhampton Wanderers,D,16,ENG,26,1993-02-25,72.83,165.34,21,1890,21,21
+Rui Patrício,Wolverhampton Wanderers,G,11,POR,31,1988-02-15,74.02,185.19,23,1890,21,21
+João Moutinho,Wolverhampton Wanderers,M,28,POR,32,1986-09-08,66.93,134.48,21,1800,21,20
+Raúl Jiménez,Wolverhampton Wanderers,F,9,MEX,28,1991-05-05,74.8,167.55,21,1763,21,20
+Leander Dendoncker,Wolverhampton Wanderers,M,32,BEL,24,1995-04-15,74.02,174.16,22,1729,21,20
+Jonny Castro,Wolverhampton Wanderers,D,19,ESP,25,1994-03-03,68.9,154.32,22,1667,20,19
+Rúben Neves,Wolverhampton Wanderers,M,8,POR,22,1997-03-13,70.87,176.37,24,1596,21,18
+Adama Traoré,Wolverhampton Wanderers,F,37,ESP,23,1996-01-25,70.08,167.55,23,1583,20,17
+Matt Doherty,Wolverhampton Wanderers,D,2,IRL,27,1992-01-16,71.65,176.37,24,1430,19,16
+Diogo Jota,Wolverhampton Wanderers,M,18,POR,22,1996-12-04,70.08,154.32,22,1395,19,16
+Romain Saïss,Wolverhampton Wanderers,D,27,MAR,29,1990-03-26,74.8,167.55,21,1265,17,15
+Willy Boly,Wolverhampton Wanderers,D,15,FRA,28,1991-02-03,72.83,178.57,23,719,8,8
+Ryan Bennett,Wolverhampton Wanderers,D,5,ENG,29,1990-03-06,74.02,154.32,19,604,11,7
+Pedro Neto,Wolverhampton Wanderers,F,7,POR,19,2000-03-09,67.72,136.69,20,353,14,3
+Rúben Vinagre,Wolverhampton Wanderers,D,29,POR,20,1999-04-09,68.5,141.09,21,333,9,3
+Patrick Cutrone,Wolverhampton Wanderers,F,10,ITA,21,1998-01-03,72.05,165.34,22,292,12,3
+Max Kilman,Wolverhampton Wanderers,D,49,ENG,22,1997-05-23,73.23,176.37,23,180,2,2
+Jesús Vallejo,Wolverhampton Wanderers,D,4,ESP,22,1997-01-05,72.44,174.16,23,162,2,1
+Morgan Gibbs-White,Wolverhampton Wanderers,M,17,ENG,19,2000-01-27,70.08,132.28,18,120,3,1
+Bernard Ashley-Seal,Wolverhampton Wanderers,F,56,ENG,20,1998-11-21,72.83,176.37,23,0,0,0
+Oskar Buur,Wolverhampton Wanderers,D,59,DEN,21,1998-03-31,70.08,143.3,20,0,0,0
+Luke Cundle,Wolverhampton Wanderers,M,68,ENG,,2002-04-26,72.05,149.91,20,0,0,0
+Owen Otasowie,Wolverhampton Wanderers,M,54,ENG,18,2001-04-20,72.05,180.78,24,0,0,0
+Taylor Perry,Wolverhampton Wanderers,M,26,ENG,18,2001-07-15,70.08,147.71,21,0,0,0
+John Ruddy,Wolverhampton Wanderers,G,21,ENG,32,1986-10-24,77.17,213.85,25,0,0,0
