@@ -1,4 +1,10 @@
 
+epl_teams_meta <- get_fsquads_epl_teams_meta()
+epl_teams_meta
+
+epl_team_players <- get_fsquads_epl_team_players(year = 2019L, team = 'Liverpool')
+epl_team_players
+
 url_index <- 'http://www.footballsquads.co.uk/eng/2019-2020/engprem.htm'
 html_index <- url_index %>% xml2::read_html()
 html_index
