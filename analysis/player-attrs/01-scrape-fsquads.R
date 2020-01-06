@@ -1,47 +1,61 @@
 
+year_current <- .get_epl_year_current(message = FALSE)
+
+url <- 'http://www.footballsquads.co.uk/squads.htm'
+page <- url %>% xml2::read_html()
+# slugs <- page %>% rvest::html_nodes(xpath = '//*[@id="main"]') %>% rvest::html_nodes('tr td') %>% rvest::html_children() %>% rvest::html_attr('href') %>% discard(is.na)
+slugs <- page %>% rvest::html_nodes(xpath = '//*[@id="main"]/table/tr/td/a') %>% rvest::html_attr('href')
+# Or
+# slugs <- page %>% rvest::html_nodes('#main > table > tr > td > a') %>% rvest::html_attr('href')
+
+url <- 'http://www.footballsquads.co.uk/archive.htm'
+page <- url %>% xml2::read_html()
+slugs <- page %>% rvest::html_nodes(xpath = '//*[@id="main"]/table/tr/td/a') %>% rvest::html_attr('href')
+slugs
+# working ----
 epl_teams_meta <- get_fsquads_epl_teams_meta()
 epl_teams_meta
 
 epl_team_players <- get_fsquads_epl_team_players(year = 2019L, team = 'Liverpool')
 epl_team_players
 
-url_index <- 'http://www.footballsquads.co.uk/eng/2019-2020/engprem.htm'
-html_index <- url_index %>% xml2::read_html()
-html_index
-nodes_tms <- 
-  html_index %>% 
-  rvest::html_node('body') %>% 
-  rvest::html_nodes('h5') %>% 
-  rvest::html_children()
-nodes_tms
-
-links_tms <- nodes_tms %>% rvest::html_attr('href')
-links_tms
-tms <- nodes_tms %>% rvest::html_text()
-tms
-
-df_links <-
-  tibble(
-    team = nodes_tms %>% rvest::html_text(),
-    slug = nodes_tms %>% rvest::html_attr('href') %>% str_remove_all('engprem/|\\.htm'),
-  )
-df_links
-
-df_nested <-
-  df_links %>% 
-  # filter(slug == 'arsenal') %>% 
-  mutate(
-    data = map(slug, scrape_fsquads_epl_rosters)
-  )
-df_nested
-
-df <- 
-  df_nested %>% 
-  unnest(data)
-df
-# df %>% filter(name == 'Name')
-# df %>% filter(name %in% c('Players no longer at this club', 'Name'))
-write_csv(df, 'output/players-epl-fsquads-2019.csv', na = '')
+# url_index <- 'http://www.footballsquads.co.uk/eng/2019-2020/engprem.htm'
+# html_index <- url_index %>% xml2::read_html()
+# html_index
+# nodes_tms <- 
+#   html_index %>% 
+#   rvest::html_node('body') %>% 
+#   rvest::html_nodes('h5') %>% 
+#   rvest::html_children()
+# nodes_tms
+# 
+# links_tms <- nodes_tms %>% rvest::html_attr('href')
+# links_tms
+# tms <- nodes_tms %>% rvest::html_text()
+# tms
+# 
+# df_links <-
+#   tibble(
+#     team = nodes_tms %>% rvest::html_text(),
+#     slug = nodes_tms %>% rvest::html_attr('href') %>% str_remove_all('engprem/|\\.htm'),
+#   )
+# df_links
+# 
+# df_nested <-
+#   df_links %>% 
+#   # filter(slug == 'arsenal') %>% 
+#   mutate(
+#     data = map(slug, scrape_fsquads_epl_rosters)
+#   )
+# df_nested
+# 
+# df <- 
+#   df_nested %>% 
+#   unnest(data)
+# df
+# # df %>% filter(name == 'Name')
+# # df %>% filter(name %in% c('Players no longer at this club', 'Name'))
+# write_csv(df, 'output/players-epl-fsquads-2019.csv', na = '')
 
 # eda ----
 df %>% 

@@ -1,56 +1,146 @@
 
-# TODO: Coerce season like `2019L` or '2019' to '2019-20' and use in `url`.
-.validate_epl_year <- function(year, year_min = 1992L, year_max = as.integer(format(Sys.Date(), '%Y')) - 1L) {
-  stopifnot(length(year) == 1L)
-  if (is.character(year)) {
-    if(str_detect(year, '-')) {
-      rgx <- '(^.*)-(.*$)'
-      x1 <- str_replace(year, rgx, '\\1')
-      x2 <- str_replace(year, rgx, '\\2')
-    } else {
-      res <- safely(~as.numeric(year))
-      if(!is.null(res$error)) {
-        stop('`year` could not be coerced to an integer.', call. = FALSE)
-      }
-      year <- res$result
-    }
-  } else if(!is.numeric(year)) {
-    stop('`year` could not be coerced to an integer..', call. = FALSE)
-  }
-  if(year < year_min | year > year_max) {
-    stop('`year` is not a valid season.', call. = FALSE)
-  }
-  # TODO: ...
-  invisible(year)
-}
-
-.validate_fsquad_year <- function(year) {
-  .validate_epl_year(year, year_min = 1993L)
-}
-
-.generate_epl_season <- function(year) {
-  year1 <- .validate_epl_year(year)
-  year2 <- year1 + 1L
-  sprintf('%04d-%04d', year1, year2)
-}
-
-.get_epl_year_default <- function() {
-  res <- as.integer(format(Sys.Date(), '%Y')) - 1L
-  message(sprintf('Using default (%04d) for `year` since none provided', res))
+.get_leagues_meta_1 <- function(url) {
+  # year <- 2019L
+  # year <- 2018L
+  
+  page <- url %>% xml2::read_html()
+  slugs <- page %>% rvest::html_nodes(xpath = '//*[@id="main"]/table/tr/td/a') %>% rvest::html_attr('href')
+  # Or
+  # slugs <- page %>% rvest::html_nodes('#main > table > tr > td > a') %>% rvest::html_attr('href')
+  # countries <- slugs %>% str_subset('(^.*)\\/([1-2].*$)', '\\1')
+  # seasons <- slugs %>% str_subset('(^.*)\\', '\\2')
+  rgx <- '(^.*)\\/([0-9-]+)\\/(.*)[.]htm$'
+  url_prefix <- url %>% str_replace('k\\/.*$', 'k/')
+  res <-
+    tibble(slug = slugs) %>% 
+    mutate_at(
+      vars(slug),
+      list(
+        country = ~str_replace_all(., rgx, '\\1'),
+        season = ~str_replace_all(., rgx, '\\2'),
+        league = ~str_replace_all(., rgx, '\\3'),
+        url = ~sprintf('%s%s', url_prefix, .)
+      )
+    ) %>%
+    mutate_at(vars(season), list(year = ~str_sub(., 1L, 4L) %>% as.integer())) %>% 
+    select(-slug)
   res
 }
 
-# TODO: Convert this to `get_fsquads_league_meta()`, and make a wrapper for "epl"(?)
-.get_fsquads_epl_teams_meta <- function(year = NULL) {
-  if(is.null(year)) {
-    year <- .get_epl_year_default()
+get_leagues_meta_1 <- memoise::memoise(.get_leagues_meta_1)
+
+.get_leagues_meta <- function() {
+  urls <- 
+    c(
+      current = 'http://www.footballsquads.co.uk/squads.htm', 
+      archive = 'http://www.footballsquads.co.uk/archive.htm'
+    )
+  
+  res_prelim <-
+    urls %>% 
+    tibble(url = .) %>% 
+    mutate(
+      res = map(url, get_leagues_meta_1)
+    ) %>% 
+    select(-url) %>% 
+    # Or
+    # select(res) %>% 
+    unnest(res) %>% 
+    # select(country, league, year, season, url) %>% 
+    select(league, year, url) %>% 
+    arrange(league, year)
+  
+  res <-
+    res_prelim %>% 
+    # Hard-coding fixes. (The `url` should not be changed.)
+    mutate_at(
+      vars(league),
+      ~case_when(
+        . == 'faprem' & year <= 2017L ~ 'engprem',
+        TRUE ~ .
+      )
+    )
+  res
+}
+
+get_leagues_meta <- memoise::memoise(.get_leagues_meta)
+
+.pull_distinctly <- function(.data, var = -1, ..., decreasing = FALSE)  {
+  var <- tidyselect::vars_pull(names(.data), !!rlang::enquo(var))
+  sort(unique(.data[[var]]), decreasing = decreasing, ...)
+}
+
+.stop_for_league <- function(leagues_meta, message_prefix = '') {
+  leagues <- leagues_meta %>% .pull_distinctly(.data$league)
+  leagues_chr <- leagues %>% paste0(sep = '', collapse = '\n')
+  stop(
+    glue::glue(
+      '{message_prefix}Try one of the following: 
+      {leagues_chr}'
+    ),
+    call. = FALSE
+  )
+}
+
+.stop_for_year <- function(leagues_meta, message_prefix = '') {
+  years <- leagues_meta_filt_1 %>% .pull_distinctly(.data$year)
+  years_chr <- years %>% paste0(sep = '', collapse = '\n')
+  stop(
+    glue::glue(
+      '{message_prefix}Try one of the following: 
+      {years_chr}'
+    ),
+    call. = FALSE
+  )
+}
+
+.validate_league <- function(leagues_meta, league) {
+  res <-
+    leagues_meta %>% 
+    filter(.data$league == league)
+  
+  if(nrow(res) == 0L) {
+    # stop(sprintf('Invalid `league` (%s)', league), call. = FALSE)
+    .stop_for_league(leagues_meta, sprintf('`league` (%s) is invalid. ', league))
   }
-  season <- .generate_epl_season(year)
-  league <- sprintf('%sprem', ifelse(year < 2018L, 'fa', 'eng'))
-  url_suffix <- sprintf('%s/%s.htm', season, league)
-  url_prefix <- 'http://www.footballsquads.co.uk/eng/'
-  url <- sprintf('%s%s', url_prefix, url_suffix)
-  page <- xml2::read_html(url)
+  res
+}
+
+# NOTE: This could become unneeded depending on how/if `.validate_league()` and `.validate_year()` are implemented.
+.validate_league_year <- function(leagues_meta, league, year) {
+  leagues_meta_filt_1 <-
+    leagues_meta %>% 
+    filter(.data$league == league)
+  
+  if(nrow(leagues_meta_filt_1) == 0L) {
+    # stop(sprintf('Invalid `league` (%s)', league), call. = FALSE)
+    .stop_for_league(leagues_meta, sprintf('`league` (%s) is invalid. ', league))
+  }
+  
+  leagues_meta_filt_2 <-
+    leagues_meta_filt_1 %>% 
+    filter(.data$year == year)
+
+  if(nrow(leagues_meta_filt_2) == 0L) {
+    .stop_for_year(leagues_meta_filt_1, sprintf('Invalid `year` (%s) (given `league` = (%s)).', year, league), call. = FALSE)
+  }
+  
+  leagues_meta_filt_2
+}
+
+.get_league_teams_meta <- function(league, year) {
+  leagues_meta <- get_leagues_meta()
+  if(missing(league)) {
+    .stop_for_league(leagues_meta, '`league` must be specified. ')
+  }
+  leagues_meta_filt_1 <- leagues_meta %>% .validate_league(league)
+  if(missing(league)) {
+    .stop_for_league(leagues_meta, '`league` must be specified. ')
+  }
+  
+  leagues_meta_filt <- leagues_meta %>% .validate_league_year(year = year, league = league)
+  url <- leagues_meta_filt %>% pull(url)
+  page <- url %>% xml2::read_html()
   nodes_teams <- 
     page %>% 
     rvest::html_node('body') %>% 
@@ -70,11 +160,11 @@
   res
 }
 
-get_fsquads_epl_teams_meta <- memoise::memoise(.get_fsquads_epl_teams_meta)
+get_league_teams_meta <- memoise::memoise(.get_league_teams_meta)
 
-.get_fsquads_epl_team_players_1 <- function(url) {
+.get_team_players_1 <- function(url) {
   # url <- 'http://www.footballsquads.co.uk/eng/2019-2020/engprem/arsenals.htm'
-  browser()
+  # browser()
   page <- url %>% xml2::read_html()
   
   df <- 
@@ -146,15 +236,14 @@ get_fsquads_epl_teams_meta <- memoise::memoise(.get_fsquads_epl_teams_meta)
   res
 }
 
-get_fsquads_epl_team_players_1 <- memoise::memoise(.get_fsquads_epl_team_players_1)
+get_team_players_1 <- memoise::memoise(.get_team_players_1)
 
-.get_fsquads_epl_team_players <- function(year = NULL, team = NULL, unnest = TRUE) {
-  if(is.null(year)) {
-    year <- .get_epl_year_default()
-  }
-  season <- .validate_fsquad_year(year)
-  # FIXME: Does this need a `safely()`?
-  f_safe <- safely(get_fsquads_epl_meta)
+.get_team_players <- function(league, year team, unnest = TRUE) {
+
+  
+  
+  
+  f_safe <- safely(get_epl_meta)
   res <- f_safe(year = year)
   if(!is.null(res$error)) {
     stop('Something went wrong.', call. = FALSE)
@@ -177,7 +266,7 @@ get_fsquads_epl_team_players_1 <- memoise::memoise(.get_fsquads_epl_team_players
   }
   
   # TODO: Need to do a `safely()` here?
-  f_safe <- possibly(get_fsquads_epl_team_players_1, otherwise = tibble())
+  f_safe <- possibly(get_epl_team_players_1, otherwise = tibble())
   res_nested <-
     meta %>% 
     mutate(
@@ -194,5 +283,4 @@ get_fsquads_epl_team_players_1 <- memoise::memoise(.get_fsquads_epl_team_players
   res
 }
 
-get_fsquads_epl_team_players <- memoise::memoise(.get_fsquads_epl_team_players)
-
+get_team_players <- memoise::memoise(.get_team_players)
