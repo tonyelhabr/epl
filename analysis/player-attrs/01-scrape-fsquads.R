@@ -1,4 +1,23 @@
 
+
+leagues_meta <- get_leagues_meta()
+leagues_meta
+
+leagues_meta %>% filter(league == 'faprem')
+
+league_teams_meta <- get_league_teams_meta(league = 'engprem', year = 2016L)
+league_teams_meta
+
+team_players_bad <- get_team_players(league = 'faprem', year = 2016L, team = 'Tottenham')
+team_players_bad
+
+team_players <- get_team_players(league = 'faprem', year = 2016L, team = 'Tottenham Hotspur')
+team_players
+
+team_players_bad <- get_team_players(league = 'engprem', year = 2016L, team = 'Tottenham Hotspur')
+team_players_bad
+
+# old ----
 year_current <- .get_epl_year_current(message = FALSE)
 
 url <- 'http://www.footballsquads.co.uk/squads.htm'
@@ -12,7 +31,7 @@ url <- 'http://www.footballsquads.co.uk/archive.htm'
 page <- url %>% xml2::read_html()
 slugs <- page %>% rvest::html_nodes(xpath = '//*[@id="main"]/table/tr/td/a') %>% rvest::html_attr('href')
 slugs
-# working ----
+# older ----
 epl_teams_meta <- get_fsquads_epl_teams_meta()
 epl_teams_meta
 

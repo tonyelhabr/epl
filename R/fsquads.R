@@ -10,20 +10,20 @@
   # countries <- slugs %>% str_subset('(^.*)\\/([1-2].*$)', '\\1')
   # seasons <- slugs %>% str_subset('(^.*)\\', '\\2')
   rgx <- '(^.*)\\/([0-9-]+)\\/(.*)[.]htm$'
-  url_prefix <- url %>% str_replace('k\\/.*$', 'k/')
+  url_prefix <- url %>% stringr::str_replace('k\\/.*$', 'k/')
   res <-
-    tibble(slug = slugs) %>% 
-    mutate_at(
+    tibble::tibble(slug = slugs) %>% 
+    dplyr::mutate_at(
       vars(slug),
       list(
-        country = ~str_replace_all(., rgx, '\\1'),
-        season = ~str_replace_all(., rgx, '\\2'),
-        league = ~str_replace_all(., rgx, '\\3'),
+        country = ~stringr::str_replace_all(., rgx, '\\1'),
+        season = ~stringr::str_replace_all(., rgx, '\\2'),
+        league = ~stringr::str_replace_all(., rgx, '\\3'),
         url = ~sprintf('%s%s', url_prefix, .)
       )
     ) %>%
-    mutate_at(vars(season), list(year = ~str_sub(., 1L, 4L) %>% as.integer())) %>% 
-    select(-slug)
+    dplyr::mutate_at(dplyr::vars(season), list(year = ~stringr::str_sub(., 1L, 4L) %>% as.integer())) %>% 
+    dplyr::select(-slug)
   res
 }
 
@@ -38,28 +38,40 @@ get_leagues_meta_1 <- memoise::memoise(.get_leagues_meta_1)
   
   res_prelim <-
     urls %>% 
-    tibble(url = .) %>% 
-    mutate(
-      res = map(url, get_leagues_meta_1)
+    tibble::tibble(url = .) %>% 
+    dplyr::mutate(
+      res = purrr::map(url, get_leagues_meta_1)
     ) %>% 
-    select(-url) %>% 
+    dplyr::select(-url) %>% 
     # Or
     # select(res) %>% 
-    unnest(res) %>% 
+    tidyr::unnest(res) %>% 
     # select(country, league, year, season, url) %>% 
-    select(league, year, url) %>% 
-    arrange(league, year)
+    dplyr::select(league, year, url) %>% 
+    dplyr::arrange(league, year)
   
-  res <-
-    res_prelim %>% 
-    # Hard-coding fixes. (The `url` should not be changed.)
-    mutate_at(
-      vars(league),
-      ~case_when(
-        . == 'faprem' & year <= 2017L ~ 'engprem',
-        TRUE ~ .
-      )
-    )
+  # # Notably, 'engprem' was 'faprem' prior to `2018`.
+  # faprem <-
+  #   res_prelim %>% 
+  #   dplyr::filter(league == 'faprem')
+  # 
+  # engprem <-
+  #   res_prelim %>% 
+  #   dplyr::filter(league == 'engprem')
+  # 
+  # # ... more to duplicate these leagues.
+  # 
+  # res <-
+  #   res_prelim %>% 
+  #   # Hard-coding fixes. (The `url` should not be changed.)
+  #   dplyr::mutate_at(
+  #     dplyr::vars(league),
+  #     ~dplyr::case_when(
+  #       . == 'faprem' & year <= 2017L ~ 'engprem',
+  #       TRUE ~ .
+  #     )
+  #   )
+  res <- res_prelim
   res
 }
 
@@ -70,34 +82,48 @@ get_leagues_meta <- memoise::memoise(.get_leagues_meta)
   sort(unique(.data[[var]]), decreasing = decreasing, ...)
 }
 
-.stop_for_league <- function(leagues_meta, message_prefix = '') {
-  leagues <- leagues_meta %>% .pull_distinctly(.data$league)
-  leagues_chr <- leagues %>% paste0(sep = '', collapse = '\n')
+.stop_for_league <- function(leagues_meta, msg_prefix = '') {
+  leagues <- leagues_meta %>% .pull_distinctly(league)
+  leagues_chr <- leagues %>% paste0(sep = '', collapse = ', ')
   stop(
     glue::glue(
-      '{message_prefix}Try one of the following: 
+      '{msg_prefix}Try one of the following: 
       {leagues_chr}'
     ),
     call. = FALSE
   )
 }
 
-.stop_for_year <- function(leagues_meta, message_prefix = '') {
-  years <- leagues_meta_filt_1 %>% .pull_distinctly(.data$year)
-  years_chr <- years %>% paste0(sep = '', collapse = '\n')
+.stop_for_year <- function(leagues_meta, msg_prefix = '') {
+  years <- leagues_meta %>% .pull_distinctly(year)
+  years_chr <- years %>% paste0(sep = '', collapse = ', ')
   stop(
     glue::glue(
-      '{message_prefix}Try one of the following: 
+      '{msg_prefix}Try one of the following: 
       {years_chr}'
     ),
     call. = FALSE
   )
 }
 
-.validate_league <- function(leagues_meta, league) {
+.stop_for_team <- function(league_teams_meta, msg_prefix = '') {
+  teams <- league_teams_meta %>% .pull_distinctly(team)
+  teams_chr <- teams %>% paste0(sep = '', collapse = ', ')
+  stop(
+    glue::glue(
+      '{msg_prefix}Try one of the following: 
+      {teams_chr}'
+    ),
+    call. = FALSE
+  )
+}
+
+.filter_league <- function(leagues_meta, league) {
+  stopifnot(is.character(league))
+  stopifnot(length(league) == 1L)
   res <-
     leagues_meta %>% 
-    filter(.data$league == league)
+    dplyr::filter(league == !!league)
   
   if(nrow(res) == 0L) {
     # stop(sprintf('Invalid `league` (%s)', league), call. = FALSE)
@@ -106,40 +132,72 @@ get_leagues_meta <- memoise::memoise(.get_leagues_meta)
   res
 }
 
-# NOTE: This could become unneeded depending on how/if `.validate_league()` and `.validate_year()` are implemented.
-.validate_league_year <- function(leagues_meta, league, year) {
-  leagues_meta_filt_1 <-
+.filter_year <- function(leagues_meta, year) {
+  stopifnot(is.numeric(year)) # Really, it should be an integer, but we can let this pass.
+  stopifnot(length(year) == 1L)
+  
+  res <-
     leagues_meta %>% 
-    filter(.data$league == league)
+    dplyr::filter(year == !!year)
   
-  if(nrow(leagues_meta_filt_1) == 0L) {
-    # stop(sprintf('Invalid `league` (%s)', league), call. = FALSE)
-    .stop_for_league(leagues_meta, sprintf('`league` (%s) is invalid. ', league))
+  if(nrow(res) == 0L) {
+    # Don't think there should ever be more than 1 `league`, given the way the rest of the functions are designed.
+    leagues <- leagues_meta %>% .pull_distinctly(league)
+    leagues_chr <- leagues %>% paste0(sep = '', collapse = '\n')
+    n_leagues <- length(leagues) == 1L
+    if(n_leagues) {
+      leagues_chr <- sprintf('given `league = %s`', leagues)
+    } else if(n_leagues > 1L) {
+      leagues_chr <- sprintf('multiple (%s) `league`s', n_leagues)
+    } else {
+      leagues_chr <- 'no `league`'
+    }
+    msg_suffix <- sprintf(' (%s).', leagues_chr)
+    .stop_for_year(leagues_meta, sprintf('`year` (%s) is invalid %s', year, msg_suffix))
   }
-  
-  leagues_meta_filt_2 <-
-    leagues_meta_filt_1 %>% 
-    filter(.data$year == year)
-
-  if(nrow(leagues_meta_filt_2) == 0L) {
-    .stop_for_year(leagues_meta_filt_1, sprintf('Invalid `year` (%s) (given `league` = (%s)).', year, league), call. = FALSE)
-  }
-  
-  leagues_meta_filt_2
+  res
 }
 
-.get_league_teams_meta <- function(league, year) {
-  leagues_meta <- get_leagues_meta()
-  if(missing(league)) {
-    .stop_for_league(leagues_meta, '`league` must be specified. ')
-  }
-  leagues_meta_filt_1 <- leagues_meta %>% .validate_league(league)
-  if(missing(league)) {
-    .stop_for_league(leagues_meta, '`league` must be specified. ')
-  }
+
+.filter_team <- function(league_teams_meta, team) {
+  stopifnot(is.character(team))
+  stopifnot(length(team) == 1L)
+  res <-
+    league_teams_meta %>% 
+    dplyr::filter(team == !!team)
   
-  leagues_meta_filt <- leagues_meta %>% .validate_league_year(year = year, league = league)
-  url <- leagues_meta_filt %>% pull(url)
+  if(nrow(res) == 0L) {
+    # Don't think there should ever be more than 1 `league`, given the way the rest of the functions are designed.
+    leagues <- league_teams_meta %>% .pull_distinctly(league)
+    leagues_chr <- leagues %>% paste0(sep = '', collapse = '\n')
+    n_leagues <- length(leagues) == 1L
+    if(n_leagues) {
+      leagues_chr <- sprintf('given `league = %s`', leagues)
+    } else if(n_leagues > 1L) {
+      leagues_chr <- sprintf('multiple (%s) `league`s', n_leagues)
+    } else {
+      leagues_chr <- 'no `league`.'
+    }
+    
+    # Don't think there should ever be more than 1 `year`, given the way the rest of the functions are designed.
+    years <- league_teams_meta %>% .pull_distinctly(year)
+    years_chr <- years %>% paste0(sep = '', collapse = '\n')
+    n_years <- length(years) == 1L
+    if(n_years) {
+      years_chr <- sprintf('`year = %s`', years)
+    } else if(n_years > 1L) {
+      years_chr <- sprintf('multiple (%s) years', n_years)
+    } else {
+      years_chr <- 'no `year`'
+    }
+    
+    msg_suffix <- sprintf(' (%s and %s).', leagues_chr, years_chr)
+    .stop_for_team(league_teams_meta, sprintf('`team` (%s) is invalid%s. ', team, msg_suffix))
+  }
+  res
+}
+
+.get_league_teams_meta_1 <- function(url) {
   page <- url %>% xml2::read_html()
   nodes_teams <- 
     page %>% 
@@ -148,138 +206,92 @@ get_leagues_meta <- memoise::memoise(.get_leagues_meta)
     rvest::html_children()
   teams <- nodes_teams %>% rvest::html_text()
   slugs <- 
-    nodes_tms %>% 
+    nodes_teams %>% 
     rvest::html_attr('href')
-  links <-
-    sprintf('%s%s/%s', url_prefix, season, slugs)
+  url_prefix <- url %>% str_replace('(^.*[0-9])\\/?.*htm$', '\\1')
+  urls <-
+    sprintf('%s/%s', url_prefix, slugs)
   res <-
-    tibble(
+    tibble::tibble(
       team = teams,
-      link = links
+      url = urls
     )
+}
+
+get_league_teams_meta_1 <- memoise::memoise(.get_league_teams_meta_1)
+
+.get_league_teams_meta <- function(league, year) {
+  
+  leagues_meta <- get_leagues_meta()
+  
+  if(missing(league)) {
+    .stop_for_league(leagues_meta, '`league` must be specified. ')
+  }
+  
+  if(missing(year)) {
+    .stop_for_year(leagues_meta, '`year` must be specified. ')
+  }
+  
+  leagues_meta_filt_1 <- leagues_meta %>% .filter_league(league)
+  leagues_meta_filt_2 <- leagues_meta_filt_1 %>% .filter_year(year  = year)
+  stopifnot(nrow(leagues_meta_filt_2) == 1L) # Probably don't even need to check for this (given that the prior checks are passed).
+  
+  # url <- leagues_meta_filt_2 %>% pull(url)
+  # res <- url %>% get_league_teams_meta_1()
+  res <-
+    leagues_meta_filt_2 %>% 
+    dplyr::mutate(data = purrr::map(url, get_league_teams_meta_1)) %>% 
+    dplyr::select(-url) %>% 
+    tidyr::unnest(data)
   res
 }
 
 get_league_teams_meta <- memoise::memoise(.get_league_teams_meta)
 
 .get_team_players_1 <- function(url) {
-  # url <- 'http://www.footballsquads.co.uk/eng/2019-2020/engprem/arsenals.htm'
-  # browser()
   page <- url %>% xml2::read_html()
   
   df <- 
     page  %>% 
     rvest::html_table(header = TRUE) %>% 
-    pluck(1) %>% 
+    purrr::pluck(1) %>% 
     janitor::clean_names() %>% 
-    as_tibble() %>% 
-    filter(name != '') %>% 
-    mutate_all(~ifelse(. == '', NA, .))
-  
-  # get_bmi_ptile_safely <- safely(PAutilities::get_BMI_percentile, otherwise = tibble())
-  # .get_bmi_ptile <- PAutilities::get_BMI_percentile
+    tibble::as_tibble() %>% 
+    dplyr::filter(name != '') %>% 
+    dplyr::mutate_all(~ifelse(. == '', NA, .))
   
   res <-
     df %>% 
-    filter(
+    dplyr::filter(
       !(name %in% c('Players no longer at this club', 'Name'))
     ) %>% 
-    mutate_at(vars(number, weight), as.integer) %>% 
-    mutate_at(vars(height), as.double) %>% 
-    mutate_at(vars(date_of_birth), lubridate::dmy) %>% 
-    select(
-      number,
-      name,
-      nat,
-      pos,
-      dob = date_of_birth,
-      height_m = height,
-      weight_kg = weight
-    ) %>% 
-    mutate(
-      bmi = weight_kg / (height_m ^ 2),
-      height_in = height_m * 39.3701, # %>% measurements::conv_unit('m', 'inch'),
-      weight_lb = weight_kg * 2.2046, # %>% measurements::conv_unit('kg', 'lbs'),
-      age_dur = lubridate::ymd(Sys.Date()) - dob
-    ) %>% 
-    mutate_at(
-      vars(age_dur),
-      list(
-        # age_mon = ~lubridate::time_length(., unit = 'months') %>% floor(),
-        age_yr = ~lubridate::time_length(., unit = 'years') %>% floor()
-      )
-    ) %>% 
-    # rename_at(vars(matches('^age_dur_')), ~str_remove(., '_dur')) %>% 
-    select(-age_dur) %>% 
-    mutate(
-      bmi_ptile = suppressWarnings(PAutilities::get_BMI_percentile(
-        weight_kg = weight_kg, 
-        height_cm = height_m * 100, 
-        sex = 'M', 
-        age_yrs = age_yr
-      ))
-    ) %>% 
-    select(
-      number,
-      name,
-      nat,
-      pos,
-      dob,
-      age = age_yr,
-      height_m,
-      height_in,
-      weight_kg,
-      weight_lb,
-      bmi,
-      bmi_ptile
-    )
+    dplyr::mutate_at(dplyr::vars(number, weight), as.integer) %>% 
+    dplyr::mutate_at(dplyr::vars(height), as.double) %>% 
+    dplyr::mutate_at(dplyr::vars(date_of_birth), lubridate::dmy)
   res
 }
 
 get_team_players_1 <- memoise::memoise(.get_team_players_1)
 
-.get_team_players <- function(league, year team, unnest = TRUE) {
+.get_team_players <- function(league, year, team) {
 
-  
-  
-  
-  f_safe <- safely(get_epl_meta)
-  res <- f_safe(year = year)
-  if(!is.null(res$error)) {
-    stop('Something went wrong.', call. = FALSE)
-  }
-  meta <- res$result
-  
-  if(!is.null(team)) {
-    stopifnot(is.character(team))
-    teams <- meta %>% pull(.data$team)
-    # is_valid_team_1 <- any(team %in% teams)
-    team_union <- intersect(team, teams)
-    is_valid_team <- length(team_union) == length(team)
-    # TODO: make an informative error message for this.
-    # if(!is_valid_team) {
-    #   team_union_diff <- length(team_union) - length(team)
-    #   # ...
-    # }
-    stopifnot(is_valid_team)
-    meta <- meta %>% filter(.data$team == team)
+  if(missing(team)) {
+    .stop_for_league(leagues_meta, '`team` must be specified. ')
   }
   
-  # TODO: Need to do a `safely()` here?
-  f_safe <- possibly(get_epl_team_players_1, otherwise = tibble())
-  res_nested <-
-    meta %>% 
-    mutate(
-      data = map(url, f_safe)
-    ) %>%
-    select(team, data)
+  league_teams_meta <- get_league_teams_meta(league = league, year = year)
   
-  if(!unnest) {
-    return(res_nested)
-  }
+  league_teams_meta_filt <- league_teams_meta %>% .filter_team(team)
+  stopifnot(nrow(league_teams_meta_filt) == 1L) # Probably don't even need to check for this (given that the prior checks are passed).
+  
+  # url <- league_teams_meta_filt %>% dplyr::pull(url)
+  # res <- url %>% get_team_players_1()
   res <-
-    res_nested %>% 
-    unnest(data)
+    league_teams_meta_filt %>% 
+    dplyr::mutate(data = purrr::map(url, get_team_players_1)) %>% 
+    dplyr::select(-url) %>% 
+    tidyr::unnest(data)
+  res
   res
 }
 
